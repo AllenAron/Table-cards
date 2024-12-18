@@ -74,8 +74,6 @@ def create_print(cards_list):
 
     A4_image = Image.new(mode='RGB', size=(A4_image_width, A4_image_height))
 
-    print(nbr_cards_horizontal, nbr_cards_vertical)
-
     i = 0
     for r in range(nbr_cards_vertical):
         for c in range(nbr_cards_horizontal):
@@ -84,7 +82,6 @@ def create_print(cards_list):
             A4_image.paste(cards_list[i], (c * A4_image_width // nbr_cards_horizontal, r * A4_image_height // nbr_cards_vertical))
             i += 1
 
-    A4_image.show()
     A4_image.save('local/output_cards/print.pdf')
 
 def main(csv_file):
